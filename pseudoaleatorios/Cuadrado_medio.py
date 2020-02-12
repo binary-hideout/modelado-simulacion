@@ -1,28 +1,28 @@
 import math
 
 def cuadrado_medio(semilla):
-    n_s = str(semilla) # n -> cantidad de dígitos
+    n_s = str(semilla)
 
-    nueva_semilla = math.pow(semilla, 2)
-    n_ns = str(nueva_semilla) # n -> cantidad de dígitos
+    potencia = int(math.pow(semilla, 2))
+    n_ns = str(potencia)
 
-    longitud = False
-    num = ""
-    while longitud != True:
-        if (len(n_ns) < (2 * len(n_s))):
-            num = "0" + n_s
+    p = len(n_ns)
+    q = len(n_s)
+
+    a = n_ns
+    for i in n_ns:
+        if p < (2 * q):
+            a = "0" + a
         else:
-            longitud = True
+            break
     
-    x = math.floor(semilla / 2)
-    y = (len(num) - 1)
-    num_aleatorio = (num[x:y])
+    x = q // 4
+    if (q % 2) == 0:
+        x = q // 2
+    numero_aleatorio = int(a[x:(p - 2)])
 
-    return num_aleatorio
+    return numero_aleatorio
 
-x = cuadrado_medio(300)
+
+x = cuadrado_medio(368)
 print(x)
-
-"""
-NO HACE NADA
-"""
