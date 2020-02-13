@@ -1,6 +1,9 @@
 """
-Módulo para la CLI (interfaz de línea de comandos)
+Generadores de números pseudoaleatorios.
 """
+
+from os import system
+
 import questionary
 
 from Productomedio import numeros_pseudoaleatorios
@@ -45,5 +48,4 @@ elif option == 3:
         else:
             mcml(n, mod, xi, a, c)
             break
-print()
-input('Presione cualquier tecla para salir...')
+system('pause')
