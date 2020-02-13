@@ -9,16 +9,13 @@ def cuadrado_medio(semilla):
     longitud = 1
     num = n_ns
     while longitud:
-        if (len(n_ns) < (2 * len(n_s))):
+        if (len(num) < (2 * len(n_ns))):
             num = "0" + num
         else:
             longitud = 0
-    x = len(n_ns) // 2
+    x = len(num) // 2
     num_aleatorio = num[x - 2: x + 2]
-    num_aleatorio = int(num_aleatorio)
-    num_aleatorio /= 10000
+    num_aleatorio = float(num_aleatorio)
+    num_aleatorio /= 100
 
     return num_aleatorio
-
-
-print(cuadrado_medio(5625))

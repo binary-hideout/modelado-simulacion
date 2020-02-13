@@ -54,5 +54,3 @@ def numeros_pseudoaleatorios():
         semilla2 = int(resultado * 100)
         # Se imprimen los resultados.
         print(str(semilla1) + "              " + str(semilla2) + "              " + str(resultado))
-
-numeros_pseudoaleatorios()
