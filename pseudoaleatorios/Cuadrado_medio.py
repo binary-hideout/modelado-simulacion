@@ -4,25 +4,21 @@ def cuadrado_medio(semilla):
     n_s = str(semilla) # n -> cantidad de dígitos
 
     nueva_semilla = math.pow(semilla, 2)
+    nueva_semilla = int(nueva_semilla)
     n_ns = str(nueva_semilla) # n -> cantidad de dígitos
-
-    longitud = False
-    num = ""
-    while longitud != True:
+    longitud = 1
+    num = n_ns
+    while longitud:
         if (len(n_ns) < (2 * len(n_s))):
-            num = "0" + n_s
+            num = "0" + num
         else:
-            longitud = True
-    
-    x = math.floor(semilla / 2)
-    y = (len(num) - 1)
-    num_aleatorio = (num[x:y])
+            longitud = 0
+    x = len(n_ns) // 2
+    num_aleatorio = num[x - 2: x + 2]
+    num_aleatorio = int(num_aleatorio)
+    num_aleatorio /= 10000
 
     return num_aleatorio
 
-x = cuadrado_medio(300)
-print(x)
 
-"""
-NO HACE NADA
-"""
+print(cuadrado_medio(5625))
