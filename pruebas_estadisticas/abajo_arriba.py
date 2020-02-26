@@ -6,7 +6,7 @@ def inicio(zn): # Recibe la "chi cuadrada"
     z = lectura()
     binario = lectura()
     z = abajo_arriba(binario)
-    print('Varianza: %g' % z)
+    print('Varianza: %g' % z) 
     if z < zn:
         print('No se rechaza que proviene de una distribución uniforme')
     else:
@@ -46,5 +46,3 @@ def abajo_arriba(binario):
     z = abs((corridas - media) / math.sqrt(varianza))
     
     return z
-
-inicio(4.5)
