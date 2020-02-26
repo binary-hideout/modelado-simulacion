@@ -8,7 +8,7 @@ def main():
     print(z)
 
     if z < zn:
-        print('No se rechaza que son independientes')
+        print('No se rechaza que proviene de una distribución uniforme')
     else:
         print('No pasa la prueba de las corridas')
 
