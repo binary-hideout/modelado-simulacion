@@ -1,14 +1,20 @@
-import pandas as pd
-import math
+import csv
+import os.path
 
 def main():
-    leer = pd.read_csv(filepath_or_buffer = "Pruebas.csv", header = None)
-    datos = leer.values.ravel()
     cont1 = 0
     cont2 = 0 
     cont3= 0 
     cont4= 0 
     cont5= 0
+    path = os.path.dirname(__file__)
+    file_path = os.path.join(path, 'Pruebas.csv')
+    with open(file_path, encoding='utf-8-sig') as pruebas:
+        csv_reader = csv.reader(pruebas)
+        datos = []
+        for row in csv_reader:
+            numbers = map(float, row)
+            datos.extend(numbers)
     for i in range(len(datos) - 1):
         if datos[i] >=0 and datos[i] <=0.2:
            cont1=+1
