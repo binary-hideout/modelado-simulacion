@@ -2,8 +2,7 @@
 Módulo para obtener rutas físicas.
 '''
 
-import sys
-import os
+import sys, os
 
 def get_file_path(file_name):
     '''
