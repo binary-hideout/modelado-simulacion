@@ -12,3 +12,13 @@ def is_number(string):
         return False
     else:
         return True
+
+def is_valid_chi(string):
+    '''
+    Valida que un string sea una chi cuadrada válida.
+    '''
+    if is_number(string):
+        chi = float(string)
+        if chi > 0:
+            return True
+    return 'Por favor ingrese un valor válido.'
