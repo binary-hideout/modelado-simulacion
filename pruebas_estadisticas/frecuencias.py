@@ -1,7 +1,7 @@
 import csv
 import os.path
 
-def main():
+def main(chi):
     cont1 = 0
     cont2 = 0 
     cont3= 0 
@@ -28,12 +28,10 @@ def main():
         elif datos[i]>0.8 and datos[i] <=1:
             cont5+=1
     frecEsp = 20
-    chi = float(input('Ingresa el valor de la chi cuadrada: '))
     print('Frecuencia observada')
     print(cont1, cont2, cont3, cont4, cont5)
     tot = ((1/frecEsp)*((cont1-frecEsp)**2+(cont2-frecEsp)**2+(cont3-frecEsp)**2+(cont4-frecEsp)**2+(cont5-frecEsp)**2))
-    print("Valor de X es")
-    print(tot)
+    print("Valor de X es", tot)
     if tot < chi:
         print('Los numeros pertenecen a una distribucion uniforme')
     else:
