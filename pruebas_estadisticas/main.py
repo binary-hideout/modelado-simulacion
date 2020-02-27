@@ -18,15 +18,16 @@ menu = select(
     qmark='*'
 ).ask()
 
+chi = text(
+    'Ingrese valor para chi cuadrada:',
+    validate=is_valid_chi,
+    qmark='>'
+).ask()
+chi = float(chi)
+
 # abajo y arriba
 if menu == 1:
-    chi = text(
-        'Ingrese valor para chi cuadrada:',
-        validate=is_valid_chi,
-        qmark='>'
-    ).ask()
-    abajo_arriba.inicio(float(chi))
+    abajo_arriba.inicio(chi)
 # frecuencias
 elif menu == 2:
-    #! error
-    frecuencias.main()
+    frecuencias.main(chi)
