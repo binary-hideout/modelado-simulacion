@@ -2,6 +2,8 @@
 Módulo para ejecutar tarea.
 '''
 
+from os import system
+
 from questionary import text
 
 from validaciones import is_valid_time
@@ -84,3 +86,6 @@ print('Tiempo de ocio de la estación 1: %d' % To1)
 print('Tiempo de ocio de la estación 2: %d' % To2)
 print('Ejes atendidos de la estación 1: %d' % Na1)
 print('Ejes atendidos de la estación 2: %d' % Na2)
+
+print()
+system('pause')
