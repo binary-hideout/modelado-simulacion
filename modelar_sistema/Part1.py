@@ -1,6 +1,5 @@
 
-from poisson import 
-	poisson
+from poisson.py import poisson
 
 TLimite = int(input('Inserte el limite de tiempo ->'))
 LCajas = 30
