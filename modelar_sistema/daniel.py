@@ -1,9 +1,9 @@
 '''
 parte 3 de la simulación
 '''
-from poisson.py import poisson
+from poisson import poisson
 
-if (Fila1 != 0) & (Fila2 <= 5):
+if (Fila1 != 0) and (Fila2 <= 5):
     Ts2 = Ts2 - delta
     if Ts2 == 0:
         if LCajas == 0:
@@ -25,5 +25,5 @@ if Fila1 <= 5:
 else:
     To1 = To1 + delta
 
-if (LCajas == 0) & (Fila1 > 5) & (Fila2 >5):
+if (LCajas == 0) and (Fila1 > 5) and (Fila2 >5):
     Ret = True
